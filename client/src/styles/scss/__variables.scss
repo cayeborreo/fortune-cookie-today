@@ -1,0 +1,13 @@
+// Variables
+// Customize first, then import bulma ones
+
+$orange: #d55236;
+$light-orange: #e4bf5c;
+$lighter-orange: #eed59e;
+
+$primary: $orange;
+$warning: $light-orange;
+$notification-padding: 0.15rem;
+
+@import "~bulma/sass/utilities/initial-variables.sass";
+@import "~bulma/sass/utilities/derived-variables.sass";

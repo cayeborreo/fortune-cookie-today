@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+// Import fonts
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap");
+
+// Import and update Bulma's global variables
+@import "./_variables";
+
+// Import only what you need from Bulma
+@import "~bulma/sass/utilities/_all.sass";
+@import "~bulma/sass/base/_all.sass";
+@import "~bulma/sass/grid/_all.sass";
+@import "~bulma/sass/helpers/_all.sass";
+@import "~bulma/sass/components/modal.sass";
+@import "~bulma/sass/elements/box.sass";
+@import "~bulma/sass/elements/button.sass";
+@import "~bulma/sass/elements/notification.sass";
+@import "~bulma/sass/elements/image.sass";
+@import "~bulma/sass/elements/tag.sass";
+@import "~bulma/sass/form/shared.sass";
+@import "~bulma/sass/form/input-textarea.sass";
+@import "~bulma/sass/form/tools.sass";
+
+// Custom app (global) styles and Bulma overrides
+.app {
+  height: 100vh;
+  width: 100vw;
+  background-color: $lighter-orange;
+  padding: 3rem 0.5rem;
+}
+
+.heading {
+  font-family: "Bungee Inline", sans-serif;
+  color: $primary;
+  margin: 1rem 0;
+  border-radius: 1rem;
+  text-shadow: -2px 2px 0 $light-orange;
+  line-height: 1;
+}
+
+.modal-content {
+  max-width: 90%;
+}
+
+// Other modules' custom styles
+@import "../../components/FortuneCookie/_fortune-cookie";
