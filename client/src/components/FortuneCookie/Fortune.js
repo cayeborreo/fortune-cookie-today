@@ -6,7 +6,10 @@ const Fortune = () => {
   if (state?.todaysFortune) {
     return (
       <center>
-        <div className="box is-size-4 my-4 box__fortune">
+        <div
+          className="box is-size-4 my-4 box__fortune"
+          data-testid="fortuneMsg"
+        >
           {state?.todaysFortune?.notes}
         </div>
       </center>

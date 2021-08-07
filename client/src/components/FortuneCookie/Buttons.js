@@ -43,6 +43,7 @@ const FortuneButton = () => {
           }
         )}
         id="getFortune"
+        data-testid="initialFortuneButton"
         onClick={handleClick}
       >
         What's my fortune?

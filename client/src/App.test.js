@@ -1,8 +1,16 @@
-import { render, screen } from "@testing-library/react";
-import App from "./app";
+import { fireEvent, render, screen } from "@testing-library/react";
+import { fetchFortunes } from "./api/requests";
+import App from "./App";
 
-test("renders learn react link", () => {
+test("Renders the header text on initial load", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const header = screen.getByText("Today's Fortune");
+
+  expect(header).toBeInTheDocument();
+});
+
+test("Fetches initial cookie sayings", () => {
+  return fetchFortunes().then((data) => {
+    expect(data).toHaveLength(100);
+  });
 });
